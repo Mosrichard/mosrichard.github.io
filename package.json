@@ -1,7 +1,7 @@
 {
   "name": "mos-richard-portfolio",
   "version": "1.0.0",
-  "homepage": "https://mosrichard.github.io/MOS-PORTFOLIO",
+  "homepage": "https://mosrichard.github.io",
   "private": true,
   "dependencies": {
     "@vercel/analytics": "^1.5.0",

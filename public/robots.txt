@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mosrichard.github.io/MOS-PORTFOLIO/sitemap.xml
+Sitemap: https://mosrichard.github.io/sitemap.xml
