@@ -1,6 +1,65 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 const Home = () => {
+  const heroRef = useRef();
+  const sectionsRef = useRef();
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    
+    // Hero section animations
+    tl.fromTo('.name', 
+      { opacity: 0, y: 50 }, 
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    )
+    .fromTo('.title', 
+      { opacity: 0, y: 30 }, 
+      { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 
+      '-=0.5'
+    )
+    .fromTo('.subtitle', 
+      { opacity: 0, y: 20 }, 
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 
+      '-=0.3'
+    )
+    .fromTo('.journey-compact', 
+      { opacity: 0, scale: 0.9 }, 
+      { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, 
+      '-=0.2'
+    )
+    .fromTo('.github-btn', 
+      { opacity: 0, y: 20 }, 
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 
+      '-=0.1'
+    );
+
+    // Resume sections stagger animation
+    gsap.fromTo('.resume-section', 
+      { opacity: 0, y: 30 }, 
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.6, 
+        stagger: 0.2, 
+        ease: 'power3.out',
+        delay: 0.5
+      }
+    );
+
+    // Skill tags animation
+    gsap.fromTo('.skill-tag', 
+      { opacity: 0, scale: 0.8 }, 
+      { 
+        opacity: 1, 
+        scale: 1, 
+        duration: 0.4, 
+        stagger: 0.05, 
+        ease: 'back.out(1.7)',
+        delay: 1
+      }
+    );
+  }, []);
   return (
     <div className="home-page">
       <div className="hero-section">
@@ -26,8 +85,7 @@ const Home = () => {
         </div>
         
         <div style={{textAlign: 'center', marginBottom: '2rem'}}>
-          <a href="#" className="github-btn" style={{fontSize: '1rem', padding: '0.8rem 2rem'}} onClick={(e) => {
-            e.preventDefault();
+          <a href="/Mos-Richard-Resume-Updated.pdf" download="Mos-Richard-Resume.pdf" className="github-btn" style={{fontSize: '1rem', padding: '0.8rem 2rem'}} onClick={(e) => {
             e.target.innerHTML = '🚀 Download Started';
             setTimeout(() => {
               e.target.innerHTML = '📄 Download Resume';

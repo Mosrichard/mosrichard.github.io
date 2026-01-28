@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import project2Image from '../assets/project2.jpg';
 import project3Image from '../assets/project3.jpg';
 import dockerProject1Image from '../assets/docker-project-1.jpg';
@@ -7,6 +8,7 @@ import k8sProject1Image from '../assets/k8s-project-1.jpeg';
 import excelDashboardImage from '../assets/Excel-Dashboard-superstore.jpg';
 import biDashboardImage from '../assets/BI Dashboard.jpeg';
 import awsVpcImage from '../assets/aws-vpc-2tier-arch.jpg';
+import cicdActionsImage from '../assets/CICD WITH ACTIONS.png';
 
 const Projects = () => {
   const [activeSubSection, setActiveSubSection] = useState(() => {
@@ -16,6 +18,90 @@ const Projects = () => {
   const renderDevOpsContent = () => {
     return (
       <>
+      
+      {/* CI/CD & GitHub Actions */}
+      <div className="tech-category">
+        <h3 className="tech-title">CI/CD & GitHub Actions</h3>
+        <div className="projects-grid">
+          <div className="project-card project-card-with-image">
+            <div className="project-image-section">
+              <img src={cicdActionsImage} alt="CI/CD with GitHub Actions" className="project-image" />
+              <div className="project-title-overlay">
+                <h3>Automated Deployment Pipeline with GitHub Actions</h3>
+                <p>Complete CI/CD pipeline using GitHub Actions for automated testing, building, and deployment to AWS with Docker containerization and security scanning</p>
+              </div>
+            </div>
+            <div className="project-content-section">
+              <div className="project-skills">
+                <span className="skill-tag">GitHub Actions</span>
+                <span className="skill-tag">CI/CD</span>
+                <span className="skill-tag">Docker</span>
+                <span className="skill-tag">AWS</span>
+                <span className="skill-tag">Terraform with Backend</span>
+                <span className="skill-tag">Linux</span>
+                <span className="skill-tag">YAML</span>
+                <span className="skill-tag">Deployment Automation</span>
+                <span className="skill-tag">Auto SSH</span>
+              </div>
+              <a href="https://github.com/Mosrichard/Reactapp-Deployment-Using-Actions" target="_blank" rel="noopener noreferrer" className="github-btn">
+                🐙 View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Terraform */}
+      <div className="tech-category">
+        <h3 className="tech-title">Terraform</h3>
+        <div className="projects-grid">
+          <div className="project-card project-card-with-image">
+            <div className="project-image-section">
+              <div className="project-title-overlay">
+                <h3>AWS Infrastructure as Code with Terraform</h3>
+                <p>Automated AWS infrastructure provisioning using Terraform modules for VPC, EC2, RDS, and S3 with state management and CI/CD integration</p>
+              </div>
+            </div>
+            <div className="project-content-section">
+              <div className="project-skills">
+                <span className="skill-tag">Terraform</span>
+                <span className="skill-tag">AWS</span>
+                <span className="skill-tag">VPC</span>
+                <span className="skill-tag">EC2</span>
+                <span className="skill-tag">RDS</span>
+                <span className="skill-tag">S3</span>
+                <span className="skill-tag">IAM</span>
+                <span className="skill-tag">HCL</span>
+              </div>
+              <a href="https://github.com/Mosrichard/terraform-aws-infrastructure" target="_blank" rel="noopener noreferrer" className="github-btn">
+                🐙 View on GitHub
+              </a>
+            </div>
+          </div>
+          <div className="project-card project-card-with-image">
+            <div className="project-image-section">
+              <div className="project-title-overlay">
+                <h3>Multi-Environment Terraform Deployment</h3>
+                <p>Scalable multi-environment infrastructure deployment using Terraform workspaces with automated state management and environment-specific configurations</p>
+              </div>
+            </div>
+            <div className="project-content-section">
+              <div className="project-skills">
+                <span className="skill-tag">Terraform</span>
+                <span className="skill-tag">Workspaces</span>
+                <span className="skill-tag">State Management</span>
+                <span className="skill-tag">AWS</span>
+                <span className="skill-tag">Modules</span>
+                <span className="skill-tag">Variables</span>
+                <span className="skill-tag">Remote Backend</span>
+              </div>
+              <a href="https://github.com/Mosrichard/terraform-multi-env" target="_blank" rel="noopener noreferrer" className="github-btn">
+                🐙 View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       
       {/* AWS */}
       <div className="tech-category">
@@ -403,6 +489,19 @@ const Projects = () => {
   // Save active sub-section to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('activeSubSection', activeSubSection);
+    
+    // Animate project cards when section changes
+    gsap.fromTo('.project-card', 
+      { opacity: 0, y: 30, scale: 0.95 }, 
+      { 
+        opacity: 1, 
+        y: 0, 
+        scale: 1,
+        duration: 0.6, 
+        stagger: 0.1, 
+        ease: 'power3.out'
+      }
+    );
   }, [activeSubSection]);
 
   const renderSubSection = () => {
