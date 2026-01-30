@@ -1,11 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
+import { useTileSystem } from '../hooks/useTileSystem';
 
 const Home = () => {
-  const heroRef = useRef();
-  const sectionsRef = useRef();
+  useTileSystem();
 
   useEffect(() => {
+
     const tl = gsap.timeline();
     
     // Hero section animations
@@ -59,6 +60,11 @@ const Home = () => {
         delay: 1
       }
     );
+
+    // Cleanup
+    return () => {
+      // Cleanup handled by useTileSystem hook
+    };
   }, []);
   return (
     <div className="home-page">
@@ -135,8 +141,8 @@ const Home = () => {
             <span className="skill-tag">Nginx</span>
             <span className="skill-tag">HTTPD</span>
             <span className="skill-tag">Jenkins</span>
+            <span className="skill-tag">GitHub Actions</span>
             <span className="skill-tag">Grafana</span>
-            <span className="skill-tag">Splunk</span>
             <span className="skill-tag">Excel</span>
             <span className="skill-tag">Power BI</span>
             <span className="skill-tag">Git</span>

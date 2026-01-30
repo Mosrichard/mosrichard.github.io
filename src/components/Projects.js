@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
+import { useTileSystem } from '../hooks/useTileSystem';
 import project2Image from '../assets/project2.jpg';
 import project3Image from '../assets/project3.jpg';
 import dockerProject1Image from '../assets/docker-project-1.jpg';
@@ -14,6 +15,9 @@ const Projects = () => {
   const [activeSubSection, setActiveSubSection] = useState(() => {
     return localStorage.getItem('activeSubSection') || 'devops';
   });
+
+  // Add tile system
+  useTileSystem();
 
   const renderDevOpsContent = () => {
     return (

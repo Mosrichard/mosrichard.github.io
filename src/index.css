@@ -1,3 +1,4 @@
+/* Performance optimizations */
 * {
   margin: 0;
   padding: 0;
@@ -13,10 +14,33 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #667eea;
+  background: #000000;
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
 }
+
+/* Base grid - subtle visible squares */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 1px, rgba(255,255,255,0.01) 1px, rgba(255,255,255,0.01) 60px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 1px, rgba(255,255,255,0.01) 1px, rgba(255,255,255,0.01) 60px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+
+
+
 
 /* Performance optimizations */
 * {

@@ -5,7 +5,7 @@ html {
 
 .app {
   min-height: 100vh;
-  background: #667eea;
+  background: #000000;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
@@ -87,8 +87,13 @@ html {
   justify-content: center;
   padding: 1rem 2rem;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   min-height: calc(100vh - 80px);
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  margin: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .section {
@@ -346,7 +351,8 @@ html {
 .project-image-section {
   height: 250px;
   position: relative;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 25%, #000000 50%, #0a0a0a 75%, #1f1f1f 100%);
+  box-shadow: inset 0 0 50px rgba(255,255,255,0.05), inset 0 0 100px rgba(255,255,255,0.02);
   display: flex;
   align-items: center;
   justify-content: center;
