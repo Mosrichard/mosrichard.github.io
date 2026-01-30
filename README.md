@@ -3,7 +3,7 @@
 Personal portfolio website showcasing DevOps and Data Analysis projects.
 
 ## 🌐 Live Site
-**https://mosrichard.github.io/MOS-PORTFOLIO/**
+**https://mosrichard.github.io/**
 
 ## 🚀 Features
 - DevOps Projects (AWS, Docker, Kubernetes, Ansible, Linux)
