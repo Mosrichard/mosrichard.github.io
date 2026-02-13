@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.98850640.css",
-    "main.js": "/static/js/main.ed76cc00.js",
+    "main.css": "/static/css/main.3c1f77fd.css",
+    "main.js": "/static/js/main.fe17b8f4.js",
     "static/media/Kubernetes-Taskmanager.png": "/static/media/Kubernetes-Taskmanager.c041b48fd0be5073c726.png",
     "static/media/CICD WITH ACTIONS.png": "/static/media/CICD WITH ACTIONS.b01e249bd65c91b3339a.png",
     "static/media/project3.jpg": "/static/media/project3.9971fe01b335ceae4229.jpg",
@@ -14,11 +14,11 @@
     "static/media/docker-project-1.jpg": "/static/media/docker-project-1.9a528a4a7b9fc6e74b56.jpg",
     "static/media/MERN-Docker-App.png": "/static/media/MERN-Docker-App.5d1f8ab43340b5cf1aa7.png",
     "index.html": "/index.html",
-    "main.98850640.css.map": "/static/css/main.98850640.css.map",
-    "main.ed76cc00.js.map": "/static/js/main.ed76cc00.js.map"
+    "main.3c1f77fd.css.map": "/static/css/main.3c1f77fd.css.map",
+    "main.fe17b8f4.js.map": "/static/js/main.fe17b8f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.98850640.css",
-    "static/js/main.ed76cc00.js"
+    "static/css/main.3c1f77fd.css",
+    "static/js/main.fe17b8f4.js"
   ]
 }
