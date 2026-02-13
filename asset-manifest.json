@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.98850640.css",
-    "main.js": "/static/js/main.6dda7884.js",
+    "main.js": "/static/js/main.ed76cc00.js",
+    "static/media/Kubernetes-Taskmanager.png": "/static/media/Kubernetes-Taskmanager.c041b48fd0be5073c726.png",
     "static/media/CICD WITH ACTIONS.png": "/static/media/CICD WITH ACTIONS.b01e249bd65c91b3339a.png",
     "static/media/project3.jpg": "/static/media/project3.9971fe01b335ceae4229.jpg",
     "static/media/Excel-Dashboard-superstore.jpg": "/static/media/Excel-Dashboard-superstore.b5a928b6f1f5e567c048.jpg",
@@ -11,12 +12,13 @@
     "static/media/docker-project-2.jpg": "/static/media/docker-project-2.cac1d8a093c7ee8cd74a.jpg",
     "static/media/aws-vpc-2tier-arch.jpg": "/static/media/aws-vpc-2tier-arch.18f4d0fc8cacf902720b.jpg",
     "static/media/docker-project-1.jpg": "/static/media/docker-project-1.9a528a4a7b9fc6e74b56.jpg",
+    "static/media/MERN-Docker-App.png": "/static/media/MERN-Docker-App.5d1f8ab43340b5cf1aa7.png",
     "index.html": "/index.html",
     "main.98850640.css.map": "/static/css/main.98850640.css.map",
-    "main.6dda7884.js.map": "/static/js/main.6dda7884.js.map"
+    "main.ed76cc00.js.map": "/static/js/main.ed76cc00.js.map"
   },
   "entrypoints": [
     "static/css/main.98850640.css",
-    "static/js/main.6dda7884.js"
+    "static/js/main.ed76cc00.js"
   ]
 }
