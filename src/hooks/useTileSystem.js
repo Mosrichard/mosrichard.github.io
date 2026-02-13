@@ -2,8 +2,24 @@ import { useEffect } from 'react';
 
 export const useTileSystem = () => {
   useEffect(() => {
-    let currentTile = null;
-    let tileContainer = null;
+    // Create blinking stars
+    const createParticles = () => {
+      const container = document.createElement('div');
+      container.id = 'particles';
+      for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 3}s`;
+        particle.style.animationDuration = `${2 + Math.random() * 2}s`;
+        container.appendChild(particle);
+      }
+      document.body.appendChild(container);
+      return container;
+    };
+
+    const particles = createParticles();
 
     // Create single hover tile
     const createHoverTile = () => {
@@ -59,6 +75,9 @@ export const useTileSystem = () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       if (hoverTile) {
         hoverTile.remove();
+      }
+      if (particles) {
+        particles.remove();
       }
     };
   }, []);

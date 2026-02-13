@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { useTileSystem } from '../hooks/useTileSystem';
 import project2Image from '../assets/project2.jpg';
 import project3Image from '../assets/project3.jpg';
 import dockerProject1Image from '../assets/docker-project-1.jpg';
@@ -18,8 +17,29 @@ const Projects = () => {
     return localStorage.getItem('activeSubSection') || 'devops';
   });
 
-  // Add tile system
-  useTileSystem();
+  // Dynamic blinking dots effect for Projects page
+  useEffect(() => {
+    const dots = [];
+    const maxDots = 80;
+
+    const createDot = () => {
+      if (dots.length >= maxDots) return;
+      const dot = document.createElement('div');
+      dot.className = 'particle';
+      dot.style.left = `${Math.random() * 100}%`;
+      dot.style.top = `${Math.random() * 100}%`;
+      dot.style.animationDelay = `${Math.random() * 3}s`;
+      document.body.appendChild(dot);
+      dots.push(dot);
+    };
+
+    const interval = setInterval(createDot, 100);
+
+    return () => {
+      clearInterval(interval);
+      dots.forEach(dot => dot.remove());
+    };
+  }, []);
 
   const renderDevOpsContent = () => {
     return (
