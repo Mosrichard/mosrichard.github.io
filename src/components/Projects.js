@@ -5,7 +5,9 @@ import project2Image from '../assets/project2.jpg';
 import project3Image from '../assets/project3.jpg';
 import dockerProject1Image from '../assets/docker-project-1.jpg';
 import dockerProject2Image from '../assets/docker-project-2.jpg';
+import mernDockerImage from '../assets/MERN-Docker-App.png';
 import k8sProject1Image from '../assets/k8s-project-1.jpeg';
+import k8sTaskManagerImage from '../assets/Kubernetes-Taskmanager.png';
 import excelDashboardImage from '../assets/Excel-Dashboard-superstore.jpg';
 import biDashboardImage from '../assets/BI Dashboard.jpeg';
 import awsVpcImage from '../assets/aws-vpc-2tier-arch.jpg';
@@ -287,46 +289,28 @@ const Projects = () => {
           </div>
           <div className="project-card project-card-with-image">
             <div className="project-image-section">
+              <img src={mernDockerImage} alt="MERN Docker Application" className="project-image" />
               <div className="project-title-overlay">
-                <h3>CI/CD Pipeline with Docker</h3>
-                <p>Built automated CI/CD pipeline using Docker containers for testing, building, and deploying applications with Jenkins integration</p>
+                <h3>Docker Compose for MERN Application</h3>
+                <p>Node.js Express server connected to MongoDB with Mongo Express UI for visual DB management. Docker Compose for easy multi-container orchestration with auto-restart on failure.</p>
               </div>
             </div>
             <div className="project-content-section">
               <div className="project-skills">
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">Jenkins</span>
-                <span className="skill-tag">CI/CD</span>
-                <span className="skill-tag">GitHub</span>
-                <span className="skill-tag">Linux</span>
-                <span className="skill-tag">Automation</span>
+                <span className="skill-tag">Docker Compose</span>
+                <span className="skill-tag">Node.js</span>
+                <span className="skill-tag">Express</span>
+                <span className="skill-tag">MongoDB</span>
+                <span className="skill-tag">Mongo Express</span>
+                <span className="skill-tag">Authentication</span>
+                <span className="skill-tag">Environment Variables</span>
               </div>
-              <a href="https://github.com/Mosrichard/docker-cicd-pipeline" target="_blank" rel="noopener noreferrer" className="github-btn">
+              <a href="https://github.com/Mosrichard/node-mongo-docker-compose" target="_blank" rel="noopener noreferrer" className="github-btn">
                 🐙 View on GitHub
               </a>
             </div>
           </div>
-          <div className="project-card project-card-with-image">
-            <div className="project-image-section">
-              <div className="project-title-overlay">
-                <h3>Microservices Architecture with Docker</h3>
-                <p>Designed and deployed microservices architecture using Docker containers with API gateway and service mesh implementation</p>
-              </div>
-            </div>
-            <div className="project-content-section">
-              <div className="project-skills">
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">Microservices</span>
-                <span className="skill-tag">API Gateway</span>
-                <span className="skill-tag">Service Mesh</span>
-                <span className="skill-tag">Kubernetes</span>
-                <span className="skill-tag">AWS</span>
-              </div>
-              <a href="https://github.com/Mosrichard/docker-microservices" target="_blank" rel="noopener noreferrer" className="github-btn">
-                🐙 View on GitHub
-              </a>
-            </div>
-          </div>
+
         </div>
       </div>
       
@@ -360,42 +344,28 @@ const Projects = () => {
               </a>
             </div>
           </div>
+
           <div className="project-card project-card-with-image">
             <div className="project-image-section">
+              <img src={k8sTaskManagerImage} alt="Kubernetes Task Manager" className="project-image" />
               <div className="project-title-overlay">
-                <h3>Microservices on Kubernetes</h3>
-                <p>Deployed scalable microservices architecture using Kubernetes with service discovery and load balancing</p>
+                <h3>Kubernetes Native Task Manager</h3>
+                <p>Full-stack task manager application deployed on Kubernetes with Ingress, LoadBalancer, MongoDB, and Mongo-Express for database management</p>
               </div>
             </div>
             <div className="project-content-section">
               <div className="project-skills">
                 <span className="skill-tag">Kubernetes</span>
-                <span className="skill-tag">Microservices</span>
                 <span className="skill-tag">Ingress</span>
-                <span className="skill-tag">ConfigMaps</span>
-                <span className="skill-tag">Secrets</span>
+                <span className="skill-tag">Services</span>
+                <span className="skill-tag">Deployment</span>
+                <span className="skill-tag">LoadBalancer</span>
+                <span className="skill-tag">Docker</span>
+                <span className="skill-tag">Docker Compose</span>
+                <span className="skill-tag">MongoDB</span>
+                <span className="skill-tag">Mongo-Express</span>
               </div>
-              <a href="https://github.com/Mosrichard/k8s-microservices" target="_blank" rel="noopener noreferrer" className="github-btn">
-                🐙 View on GitHub
-              </a>
-            </div>
-          </div>
-          <div className="project-card project-card-with-image">
-            <div className="project-image-section">
-              <div className="project-title-overlay">
-                <h3>Kubernetes CI/CD Pipeline</h3>
-                <p>Implemented automated CI/CD pipeline with Kubernetes deployments using GitOps principles and ArgoCD</p>
-              </div>
-            </div>
-            <div className="project-content-section">
-              <div className="project-skills">
-                <span className="skill-tag">Kubernetes</span>
-                <span className="skill-tag">ArgoCD</span>
-                <span className="skill-tag">GitOps</span>
-                <span className="skill-tag">Helm</span>
-                <span className="skill-tag">Jenkins</span>
-              </div>
-              <a href="https://github.com/Mosrichard/k8s-cicd-gitops" target="_blank" rel="noopener noreferrer" className="github-btn">
+              <a href="https://github.com/Mosrichard/Kubernetes-Native-Task-Manager" target="_blank" rel="noopener noreferrer" className="github-btn">
                 🐙 View on GitHub
               </a>
             </div>

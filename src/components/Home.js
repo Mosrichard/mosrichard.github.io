@@ -91,7 +91,7 @@ const Home = () => {
         </div>
         
         <div style={{textAlign: 'center', marginBottom: '2rem'}}>
-          <a href="/Mos-Richard-Resume-Updated.pdf" download="Mos-Richard-Resume.pdf" className="github-btn" style={{fontSize: '1rem', padding: '0.8rem 2rem'}} onClick={(e) => {
+          <a href="/Mos-Resume-DevOps.pdf" download="Mos-Resume-DevOps.pdf" className="github-btn" style={{fontSize: '1rem', padding: '0.8rem 2rem'}} onClick={(e) => {
             e.target.innerHTML = '🚀 Download Started';
             setTimeout(() => {
               e.target.innerHTML = '📄 Download Resume';
